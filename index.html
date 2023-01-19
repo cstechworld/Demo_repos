@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css to forms</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caramel&display=swap'); 
+        body{
+            margin: 0;padding: 0;
+            background-color: darkgray;
+            font-family: 'Caramel', cursive;
+            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+
+        }
+        .form_box{
+            height: auto;
+            width: 40%;
+            background-color: beige;
+            border: 2px solid brown;
+            border-radius: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 40px;
+            padding-top: 0;
+            box-sizing: border-box;
+            background-image: url('images/pexels-hasan-albari-1229861.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            
+        }
+        .form_box h2{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            letter-spacing: 5px;
+            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+        }
+        .form_box form{
+            margin: 0;padding: 0;
+        }
+        .form_box input[type="text"],.form_box input[type="password"],select,textarea{
+            height: 30px;
+            width: 60%;
+            margin-left: 30px;
+            background: transparent;
+            border: none;
+            outline: none;
+            padding-left: 10px;
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            letter-spacing: 2px;
+            border-bottom: 2px solid rgb(255, 255, 255);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            transition: 0.1s;
+            
+        }
+        .form_box input[type="text"]:focus{
+            border-color: chocolate;
+            border-width: 5px;
+        }
+        select *{
+            background-color: brown;
+            color: white;
+            border: none;
+            outline: none;
+        }
+        .special {
+            font-weight: bold !important;
+            color: #fff !important;
+            background: #bc0000 !important;
+            text-transform: uppercase;
+            }
+        .form_box label{
+            color: rgb(255, 255, 255);
+            font-size: larger;
+            letter-spacing: 2px;
+        }
+        .form_box input[type="submit"]{
+            height: 40px;
+            padding: 10px 40px;
+            background-color: brown;
+            color: white;
+            border: none;
+            letter-spacing: 3px;
+            font-weight: 300;
+            position: relative;
+            left: 50%;
+            box-sizing: border-box;
+            transform: translate(-50%);
+            transition: 0.5s;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .form_box input[type="submit"]:hover{
+            background: transparent;
+            color: rgb(255, 255, 255);
+            box-sizing: border-box;
+            border-radius: 10px;
+            cursor:pointer;
+            box-shadow: 0px 0px 10px rgb(255, 255, 255);
+        }
+        textarea {
+            width: 88%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            color: #fff;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 4px;
+            background: transparent;
+            font-size: 16px;
+            resize: none;
+            }
+    </style>
+</head>
+<body>
+    <div class="form_box">
+        <h2>Sign Up form</h2>
+        <form action="">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" /><br><br>
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname" /><br><br>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass" style="margin-left: 42px;" /><br><br>
+            <label for="loginas">Login As</label>
+            <select name="loginas" id="loginas" style="margin-left: 42px;">
+                <option value="admin" class="special">Admin</option>
+                <option value="user" class="special">User</option>
+                <option value="others" class="special">Others</option>
+            </select><br><br>
+            <textarea></textarea>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+    
+</body>
+</html>
